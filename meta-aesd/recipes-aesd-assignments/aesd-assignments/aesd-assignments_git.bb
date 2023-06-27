@@ -35,9 +35,6 @@ do_configure () {
 }
 
 do_compile () {
-	# uncomment for debugging output
-	#sed -i "s/#DEBUG 0/#DEBUG 1/g" ${S}/aesdsocket.c
-	
 	oe_runmake
 }
 
