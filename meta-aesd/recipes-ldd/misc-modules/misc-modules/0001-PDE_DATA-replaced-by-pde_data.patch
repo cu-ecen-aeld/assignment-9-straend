@@ -1,0 +1,31 @@
+From ff394eb36aa7f1a40423854c7bb4ae90ada24d08 Mon Sep 17 00:00:00 2001
+From: Tomas Strand <tomas@fik1.net>
+Date: Wed, 21 Jun 2023 11:32:37 +0300
+Subject: [PATCH] PDE_DATA() replaced by pde_data()
+
+---
+ misc-modules/jit.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/misc-modules/jit.c b/misc-modules/jit.c
+index f96e9ae..e88c763 100644
+--- a/misc-modules/jit.c
++++ b/misc-modules/jit.c
+@@ -93,7 +93,7 @@ int jit_fn_show(struct seq_file *m, void *v)
+ 
+ static int jit_fn_open(struct inode *inode, struct file *file)
+ {
+-	return single_open(file, jit_fn_show, PDE_DATA(inode));
++	return single_open(file, jit_fn_show, pde_data(inode));
+ }
+ 
+ static const struct file_operations jit_fn_fops = {
+@@ -303,7 +303,7 @@ int jit_tasklet_show(struct seq_file *m, void *v)
+ 
+ static int jit_tasklet_open(struct inode *inode, struct file *file)
+ {
+-	return single_open(file, jit_tasklet_show, PDE_DATA(inode));
++	return single_open(file, jit_tasklet_show, pde_data(inode));
+ }
+ 
+ static const struct file_operations jit_tasklet_fops = {

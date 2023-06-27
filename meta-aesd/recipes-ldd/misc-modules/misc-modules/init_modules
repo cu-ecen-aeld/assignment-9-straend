@@ -1,0 +1,20 @@
+#! /bin/sh
+set -e
+
+case "$1" in
+    start)
+        echo "loading misc-modules"
+        module_load hello
+        module_load faulty
+        ;;
+    stop)
+        echo "Unloading misc-modules"
+        module_unload hello
+        module_unload faulty
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+exit 0
+
