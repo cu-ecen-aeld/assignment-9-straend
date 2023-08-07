@@ -33,6 +33,8 @@ case "$1" in
     stop)
         module=aesdchar
         device=aesdchar
+        killall -9 aesdsocket
+        killall -9 /usr/bin/aesdsocket
         cd `dirname $0`
         # invoke rmmod with all arguments we got
         rmmod $module || exit 1
