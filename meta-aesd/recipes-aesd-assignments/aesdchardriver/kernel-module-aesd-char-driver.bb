@@ -6,22 +6,22 @@ inherit module
 
 ## build from source without git commits
 
-SOURCE_PATH = "/home/tomas/cor/ass3"
+#SOURCE_PATH = "/home/tomas/cor/ass3"
 
-SRC_URI  = "file://${SOURCE_PATH}/ \
-           file://aesddriver-start-stop \
-    	  "
-PV = "dev"
-S = "${WORKDIR}${SOURCE_PATH}/aesd-char-driver"
+#SRC_URI  = "file://${SOURCE_PATH}/ \
+#           file://aesddriver-start-stop \
+#    	  "
+#PV = "dev"
+#S = "${WORKDIR}${SOURCE_PATH}/aesd-char-driver"
 
 # "Production" build
-#SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main \
-#           file://aesddriver-start-stop \
-#           "
-#PV = "1.0+git${SRCPV}"
+SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main \
+           file://aesddriver-start-stop \
+           "
+PV = "1.0+git${SRCPV}"
 ## https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
-#SRCREV = "260458276565e173b2590f8c5b37409a87243970"
-#S = "${WORKDIR}/git/aesd-char-driver"
+SRCREV = "367130d3bd889dc2d100272bdfe40257b03b2e0a"
+S = "${WORKDIR}/git/aesd-char-driver"
 
 ## End Production build
 

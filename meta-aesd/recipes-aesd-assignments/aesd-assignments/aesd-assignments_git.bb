@@ -3,18 +3,18 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 # DEV build
-SOURCE_PATH="/home/tomas/cor/ass3"
+#SOURCE_PATH="/home/tomas/cor/ass3"
 
-SRC_URI = "file://${SOURCE_PATH}/"
-PV = "dev"
-S = "${WORKDIR}${SOURCE_PATH}/server"
+#SRC_URI = "file://${SOURCE_PATH}/"
+#PV = "dev"
+#S = "${WORKDIR}${SOURCE_PATH}/server"
 
 # PROD build
-#SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main"
-#PV = "1.0+git${SRCPV}"
-## https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
-#SRCREV = "1e136eec94a6d991ca0718c4438e12e4e58cf5c2"
-#S = "${WORKDIR}/git/server"
+SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main"
+PV = "1.0+git${SRCPV}"
+# https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
+SRCREV = "367130d3bd889dc2d100272bdfe40257b03b2e0a"
+S = "${WORKDIR}/git/server"
 
 ## End Production
 
