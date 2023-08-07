@@ -4,18 +4,26 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 inherit module
 
-#SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main 
-SRC_URI = " git:///home/ubuntu/assignments-3-and-later-straend/;protocol=file;branch=main \
+## build from source without git commits
+
+SOURCE_PATH = "/home/tomas/cor/ass3"
+
+SRC_URI  = "file://${SOURCE_PATH}/ \
            file://aesddriver-start-stop \
-		  "
+    	  "
+PV = "dev"
+S = "${WORKDIR}${SOURCE_PATH}/aesd-char-driver"
 
+# "Production" build
+#SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main \
+#           file://aesddriver-start-stop \
+#           "
+#PV = "1.0+git${SRCPV}"
+## https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
+#SRCREV = "260458276565e173b2590f8c5b37409a87243970"
+#S = "${WORKDIR}/git/aesd-char-driver"
 
-PV = "1.0+git${SRCPV}"
-# https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
-#SRCREV = "1a9ecf2b38705b71b0d8c9d1f0b850605000ea8b"
-SRCREV = "01c0ef962f3abaa56a06697c1b3019672f606cbd"
-
-S = "${WORKDIR}/git/aesd-char-driver"
+## End Production build
 
 FILES:${PN} += "${INIT_D_DIR}/${INITSCRIPT_NAME}"
 
