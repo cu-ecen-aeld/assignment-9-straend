@@ -1,3 +1,6 @@
 [submodule "poky"]
 	path = poky
 	url = https://git.yoctoproject.org/poky
+[submodule "assignment-autotest"]
+	path = assignment-autotest
+	url = https://github.com/straend/assignment-autotest.git
