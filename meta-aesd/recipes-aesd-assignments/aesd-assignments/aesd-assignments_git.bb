@@ -12,8 +12,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 # PROD build
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;protocol=ssh;branch=main"
 PV = "1.0+git${SRCPV}"
-# https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
-SRCREV = "367130d3bd889dc2d100272bdfe40257b03b2e0a"
+SRCREV = "fb4e34ebf7537279dedb7a1e74da961a5b139af1"
 S = "${WORKDIR}/git/server"
 
 ## End Production

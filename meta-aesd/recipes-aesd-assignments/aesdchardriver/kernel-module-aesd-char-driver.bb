@@ -19,8 +19,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-straend;pro
            file://aesddriver-start-stop \
            "
 PV = "1.0+git${SRCPV}"
-## https://github.com/cu-ecen-aeld/assignments-3-and-later-straend/commits/assignment-8-complete
-SRCREV = "367130d3bd889dc2d100272bdfe40257b03b2e0a"
+SRCREV = "fb4e34ebf7537279dedb7a1e74da961a5b139af1"
 S = "${WORKDIR}/git/aesd-char-driver"
 
 ## End Production build
